@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>(Dis)comfort prompt formatter</title> 
+</head>
+<body>
+<textarea id="textToArray" style="width:300px; height:120px;"></textarea>
+<button onclick="toArray()">To Array</button>
+<div id="arrayOutput"></div>
+
+<script type="text/javascript">
+    function toArray( ) {
+        var textAreaElement = document.getElementById('textToArray');
+        var namesArray = textAreaElement.value.trim().split('\n');
+        console.log( namesArray );
+        document.getElementById('arrayOutput').innerText = JSON.stringify(namesArray);
+    }
+</script>

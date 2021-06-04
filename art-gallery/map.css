@@ -1,0 +1,190 @@
+
+/* Help modal */
+.show-modal {
+    display: block;
+    position:absolute;
+    z-index: 1;
+}
+.hide-modal {
+    display: none;
+}
+/* How to Play Modal */
+.modal-body .help-tips {
+    padding: 0 1.5em;
+}
+
+.modal-content {
+    width: 50%;
+    margin: auto;
+    padding: 0;
+    position: relative;
+    top: 5%;
+    background-color: #EFEBE9;
+    border: 1px solid #808080;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation: animateTop 0.4s;
+}
+
+.modal-header {
+    border-bottom: 1px solid #D7CCC8;
+    padding: 0em 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* .modal-body {
+    padding: 1.6em 0.3em 1em;
+} */
+
+.modal-body .message {
+    text-align: center;
+}
+
+.modal-body .message p {
+    margin-bottom: 0.5em;
+}
+
+.modal-footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 0 1em 1.5em;
+}
+
+.modal-footer button {
+    padding: 0.3em 1em;
+    width: 50%;
+} 
+
+/*collapsible*/
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+/*end collapse*/
+
+/* Page Footer */
+.page-footer {
+    border-top: 1px solid #D7CCC8;
+    padding: 0.5em 0;
+/*    text-align: center;*/
+    font-size: .8em;
+}
+
+.page-footer-link {
+    color: #6495ED;
+    font-weight: 700;
+}
+
+.page-footer-link:hover {
+    color: #212121;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.page-footer-link:active {
+    text-decoration: none;
+}   
+
+.page-footer-link:focus {
+    outline: #6495ED auto 5px;
+}
+
+.page-footer-link:visited {
+    color: #3E2723;
+}
+
+body {
+    font-family: monospace, Arial, Helvetica, sans-serif;
+}
+.tool-tip {
+    /* float: left; */
+    margin-top: -3.7em;
+    margin-right: 0.3em;
+    position: relative;
+}
+
+.tool-tip button {
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 1.6em;
+    font-weight: 900;
+}
+
+.tool-tip .tool-tip-text {
+    visibility: hidden;
+    width: 5.5em;
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 5px 0;
+    /* position: absolute; */
+    /* top: 2.1em;
+    right: 0;
+    z-index: 1; */
+    border-radius: 0.3em;
+}
+
+.tool-tip:hover .tool-tip-text{
+    visibility: visible;
+    right: 2em
+}
+
+path.background_square {
+/*    fill: rgb(128, 206, 226);
+*/
+    fill: #23395e;
+}
+path.polygon {
+  stroke: #000;
+  fill: #fff;
+  line-width: 5px;
+}
+path.polygon.bad {
+  fill: transparent;
+}
+path.triangulation {
+  stroke: #797;
+  fill: transparent;
+  line-width: 4px;
+  pointer-events:none;
+}
+path.guard_vis {
+  stroke: transparent;
+  fill: rgba(0, 255, 0, 0.3);
+  pointer-events:none;
+}
+
+circle.polygon_v {
+  fill: #0178d3;
+  stroke: #fff;
+}
+circle.guard {
+  fill: rgb(0, 255,0);
+  stroke: #000;
+  line-width:1px;
+}
+/*circle.polygon_v {
+  fill: #00F;
+}
+*//*circle.guard {
+  fill: rgb(0, 255,0);
+  stroke: #000;
+  line-width:1px;
+}
+*/

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>The Art Gallery Problem</title>
+    <link rel="stylesheet" href="map.css">
+    <script src="d3.v3.min.js"></script>
+
+</head>
+<body>
+<h1>The Art Gallery Problem</h1>
+<!-- <h2>Play Around to Get Comfortable</h2> -->
+<!-- <table style="width:70%">
+<tr>
+  <td style="vertical-align:text-top;padding-right:20px;width:40%"> -->
+<!-- <b>Instructions</b> -->
+
+<div style="width:70%">
+Click/drag inside the (white) region to place/move guards. Unguarded areas
+are white, so you have succeeded if the interior is completely green.
+Overlapping areas of coverage are a deeper shade of green.
+</div>
+
+<button onClick="selectBuilding(0)">Map 1</button>
+<button onClick="selectBuilding(1)">Map 2</button>
+<button onClick="selectBuilding(2)">Map 3</button>
+<button onClick="selectBuilding(3)">Map 4</button>
+<button onClick="selectBuilding(4)">Map 5</button>
+<button onClick="selectBuilding(5)">Map 6</button>
+<button onClick="selectBuilding(6)">Map 7</button>
+<button onClick="selectBuilding(7)">Map 8</button>
+<button onClick="selectBuilding(8)">Map 9</button>
+<button onClick="selectBuilding(9)">Map 10</button>
+<span class="tool-tip">
+    <button aria-label="how to play" onClick="openHelpModal()">
+        <svg width="40" height="40">
+            <circle cx="20" cy="20" r="15" stroke-width="2" fill="#000000" />
+            <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="1em" dy=".4em">❓</text>
+            ❓
+        </svg>
+    </button>
+    <span class="tool-tip-text">Help</span>
+  </span><br/>
+  
+<!-- Modal to display Game Instructions -->
+<div class="modal hide-modal" id="helpModal">
+    <div class="modal-content">
+        <span aria-label="close" role="button" class="close" onClick="closeHelpModal()">&times;</span>
+        <div class="modal-header">
+            <h3>Help</h2>
+        </div>
+        <div class="modal-body">
+            <div class="help-tips">
+                <!-- <td style="vertical-align:text-top;padding-right:20px"> -->
+                    <!-- <h3>Moving, Adding and Removing</h3> -->
+                      <li>You can <i>move</i> a <b>guard</b> by dragging within the polygon.</li>
+                      <li>You can <i>remove</i> a <b>guard</b> by clicking it or dragging it outside of the polygon.</li>
+                      <li>You can <i>add</i> a new <b>guard</b> by clicking anywhere inside the polygon.</li>
+                      <li>You can <i>move</i> a <b>polygon point</b> by dragging it. 
+                        Be careful to not cause the polygon to intersect with itself!</li>
+                      <li>You can <i>remove</i> a <b>polygon point</b> by clicking it.</li>
+                      <li>You can <i>add</i> a new <b>polygon point</b> by clicking anywhere outside the polygon.</li>
+                    </ul>
+                  <!-- </td>
+                  </tr>
+                  </table>             -->
+                </div>
+        </div>
+        <div class="modal-footer">
+            <button class="brown-button" onClick="closeHelpModal()">Close</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- <button class="visibility:hidden" onClick="triangulateAndGuard()">Triangulate to place n/3 guards</button> -->
+
+<script src="map.js"></script>
+
+<button type="button" class="collapsible">View and/or edit coordinates</button>
+<table class="collapsibleContent" style="width:70%;display:none"><tr><td style="padding: 0 20px 0 0"><!-- <label>Coordinates:</label> --></td>
+<td style="width:80%"><textarea style="width:90%" id="polygonData"></textarea></td>
+<td>
+    <button onClick="updatePolygon()">Update</button></td></tr></table>
+
+    <footer>
+        <div class="page-footer">
+            <p>Adapted from the projects of <a href=http://www.hexahedria.com>Daniel Johnson</a> 
+                and <a href="https://medium.com/@adamichelllle/building-a-memory-matching-game-in-javascript-48e792c7b563" class="page-footer-link">Michelle Aniuchi</a>.
+                        </p>
+                    </div>
+                </footer>
+<script src="ui.js"></script>
+
+</body>
+</html>
